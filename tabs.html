@@ -81,10 +81,10 @@
         .tabs a.active {
             background: #ddd;
         }
-        .tabgroup div {
+       /* .tabgroup div {
             padding: 30px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-        }
+        }  */
         .clearfix:after {
             content: "";
             display: table;
@@ -102,28 +102,250 @@
 
             background-color: white;
         }
+        .std > .row {
+            margin-right: 0px;
+            margin-left: -4px;
+        }
 
+
+
+
+
+
+        .filter{
+            height : 45px;
+            width : 45px;
+            margin-bottom: 20px;
+            margin-left: 3px;
+        }
+
+        *{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .controls{
+            padding:0;
+            float:right;
+            background: transparent;
+            color: #eee;
+            text-align:center;
+        }
+
+        label{
+            font-weight: 300;
+            margin: 0 .4em 0 0;
+        }
+
+        button{
+            display: inline-block;
+            padding: .4em .8em;
+            background: #fff;
+            border: 0;
+            color: #908e8a;
+            font-size: 16px;
+            font-weight: 300;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button.active{
+        //background: #68b8c4;
+        }
+
+        button:focus{
+            outline: 0 none;
+        }
+
+        button + label{
+            margin-left: 1em;
+        }
+
+        }
+
+        div.row > div.sidebar{
+            background-color:pink;
+            width:313px !important;
+        }
+
+        .mix{
+            margin: 0 0 0 0 !important;
+            border : 2px solid #E2E2E2;
+        }
+
+
+        .container1{
+            background-color:yellow;
+            padding: 0;
+            float:left;
+            width:853px;
+            font-size: 0.1px;
+            background: transparent;
+            margin-right:0;
+
+
+            -webkit-backface-visibility: hidden;
+        }
+
+
+        .container1:after{
+            content: '';
+            display: inline-block;
+            width: 100%;
+        }
+
+
+        .container1 .mix,
+        .container1 .gap{
+            display: inline-block;
+            width: 283px;
+            height:283px;
+        }
+
+        .container1 .mix{
+            background: #ffffff;
+            display: none;
+            margin-bottom: 0 !important;
+        }
+
+        .container1 .mix.category-1{
+
+        }
+
+        .container1 .mix.category-2{
+
+        }
+
+        /*
+        .container1 .mix:after{
+          content: attr(data-myorder);
+          color: white;
+          font-size: 16px;
+          display: inline-block;
+          vertical-align: top;
+          padding: 4% 6%;
+          font-weight: 700;
+        }
+
+        .container1 .mix:before{
+          content: '';
+          display:block;
+          padding-top: 75%;
+        }
+        */
+
+        /*
+        @media all and (min-width: 420px){
+          .container1 .mix,
+          .container1 .gap{
+            width: 32%;
+          }
+        }
+
+        @media all and (min-width: 640px){
+          .container1 .mix,
+          .container1 .gap{
+            width: 23.5%;
+          }
+        }
+        */
+        #all {
+            width:90%;
+        }
+        .line{
+
+            display: inline;
+        }
     </style>
 </head>
 <body>
 
 
 <div class="wrapper">
-    <h1>Quick and Simple Tabs</h1>
-    <p>A quick and easy method for tabs that supports multiple tab groups on one page.</p>
     <ul class="tabs clearfix" data-tabgroup="first-tab-group">
 
+<<<<<<< HEAD
         <li><a href="#tab1" class="active brands">|<span class="eng">Brand Searching</span>جست و جوی برند ها| </a></li>
         <li class="space"></li>
         <li><a href="#tab2">|<span class="eng">Newest</span>جدیدترین |</a></li>
         <li><a href="#tab4">|<span class="eng">Top Seller</span>پر فروش ترین |</a></li>
         <li><a href="#tab4">|<span class="eng">Highest Rated</span>محبوب ترین |</a></li>
+=======
+        <li style="display: inline;"><a href="#tab1" class="active">Tab 1</a></li>
+        <li class="space" style="display: inline;"></li>
+        <li style="display: inline;"><a href="#tab2">Tab 2</a></li>
+        <li style="display: inline;"><a href="#tab3">Tab 3</a></li>
+        <li style="display: inline;"><a href="#tab4">Tab 4</a></li>
+>>>>>>> 5aa29a39a491d2a9fe4f08dd847f34dcdfa29d38
     </ul>
     <section id="first-tab-group" class="tabgroup">
         <div id="tab1">
-            <h2>Heading 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla deserunt consectetur ratione id tempore laborum laudantium facilis reprehenderit beatae dolores ipsum nesciunt alias iusto dicta eius itaque blanditiis modi velit.</p>
-        </div>
+
+            <div class="controls">
+
+
+
+                <button class="filter" data-filter="all" id="all">همه</button><br>
+                <button class="filter" data-filter=".category-1">A</button>
+                <button class="filter" data-filter=".category-2">B</button>
+                <button class="filter" data-filter=".category-2">C</button>
+                <button class="filter" data-filter=".category-2">D</button>
+                <button class="filter" data-filter=".category-2">E</button>
+                <button class="filter" data-filter=".category-2">F</button>
+                <button class="filter" data-filter=".category-2">G</button>
+                <button class="filter" data-filter=".category-2">H</button>
+                <button class="filter" data-filter=".category-2">I</button>
+                <button class="filter" data-filter=".category-2">J</button>
+                <button class="filter" data-filter=".category-2">K</button>
+                <button class="filter" data-filter=".category-2">L</button>
+                <button class="filter" data-filter=".category-2">M</button>
+                <button class="filter" data-filter=".category-2">N</button>
+                <button class="filter" data-filter=".category-2">O</button>
+                <button class="filter" data-filter=".category-2">P</button>
+                <button class="filter" data-filter=".category-2">Q</button>
+                <button class="filter" data-filter=".category-2">R</button>
+                <button class="filter" data-filter=".category-2">S</button>
+                <button class="filter" data-filter=".category-2">T</button>
+                <button class="filter" data-filter=".category-2">U</button>
+                <button class="filter" data-filter=".category-2">V</button>
+                <button class="filter" data-filter=".category-2">W</button>
+                <button class="filter" data-filter=".category-2">X</button>
+                <button class="filter" data-filter=".category-2">Y</button>
+                <button class="filter" data-filter=".category-2">Z</button>
+
+                <!-- <label>Sort:</label>
+
+                <button class="sort" data-sort="myorder:asc">Asc</button>
+                <button class="sort" data-sort="myorder:desc">Desc</button> -->
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id="Container1" class="container1">
+                <div class="mix category-1" data-myorder="1"></div>
+                <div class="mix category-1" data-myorder="2"></div>
+                <div class="mix category-1" data-myorder="3"></div>
+                <div class="mix category-2" data-myorder="4"></div>
+                <div class="mix category-1" data-myorder="5"></div>
+                <div class="mix category-1" data-myorder="6"></div>
+                <div class="mix category-2" data-myorder="7"></div>
+                <div class="mix category-2" data-myorder="8"></div>
+
+
+            </div>
+
+                </div>
         <div id="tab2">
             <h2>Heading 2</h2>
             <p>Adipisci autem obcaecati velit natus quos beatae explicabo at tempora minima voluptates deserunt eum consectetur reiciendis placeat dolorem repellat in nam asperiores impedit voluptas iure repellendus unde eveniet accusamus ex.</p>
@@ -139,24 +361,28 @@
     </section>
 </div>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
 
 <script>
-$('.tabgroup > div').hide();
-$('.tabgroup > div:first-of-type').show();
-$('.tabs a').click(function(e){
-e.preventDefault();
-var $this = $(this),
-tabgroup = '#'+$this.parents('.tabs').data('tabgroup'),
-others = $this.closest('li').siblings().children('a'),
-target = $this.attr('href');
-others.removeClass('active');
-$this.addClass('active');
-$(tabgroup).children('div').hide();
-$(target).show();
+    $('.tabgroup > div').hide();
+    $('.tabgroup > div:first-of-type').show();
+    $('.tabs a').click(function(e){
+        e.preventDefault();
+        var $this = $(this),
+                tabgroup = '#'+$this.parents('.tabs').data('tabgroup'),
+                others = $this.closest('li').siblings().children('a'),
+                target = $this.attr('href');
+        others.removeClass('active');
+        $this.addClass('active');
+        $(tabgroup).children('div').hide();
+        $(target).show();
 
-})
+    })
+    $(function(){
+        $('#Container1').mixItUp();
+    });
 </script>
 
 </body>
