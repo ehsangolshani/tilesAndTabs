@@ -37,6 +37,7 @@
             border-right: 1px solid #E2E2E2;
             border-left: 1px solid #E2E2E2;
             float: right;
+            background-color: #EEEEEE;
             width: 313px !important;
         }
         .tabs li:last-child {
@@ -55,10 +56,27 @@
             display: block;
             text-align: center;
             text-decoration: none;
-            text-transform: uppercase;
-            color: #888;
+            color: #666464;
             padding: 20px 0;
         }
+
+        .tabs a .eng{
+            color:#F2F2F2;
+        }
+
+
+        .tabs a:first-child {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #454243;
+
+        }
+        
+        .tabs a:first-child .eng{
+            color:#D0D0D0;
+        }
+
         .tabs a:hover,
         .tabs a.active {
             background: #ddd;
@@ -95,11 +113,11 @@
     <p>A quick and easy method for tabs that supports multiple tab groups on one page.</p>
     <ul class="tabs clearfix" data-tabgroup="first-tab-group">
 
-        <li><a href="#tab1" class="active">Tab 1</a></li>
+        <li><a href="#tab1" class="active brands">|<span class="eng">Brand Searching</span>جست و جوی برند ها| </a></li>
         <li class="space"></li>
-        <li><a href="#tab2">Tab 2</a></li>
-        <li><a href="#tab3">Tab 3</a></li>
-        <li><a href="#tab4">Tab 4</a></li>
+        <li><a href="#tab2">|<span class="eng">Newest</span>جدیدترین |</a></li>
+        <li><a href="#tab4">|<span class="eng">Top Seller</span>پر فروش ترین |</a></li>
+        <li><a href="#tab4">|<span class="eng">Highest Rated</span>محبوب ترین |</a></li>
     </ul>
     <section id="first-tab-group" class="tabgroup">
         <div id="tab1">
