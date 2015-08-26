@@ -1,0 +1,145 @@
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+        .wrapper {
+            width:1170px;
+            margin: 4px auto;
+            font-family: sans-serif;
+            color: #555;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        h1 + p {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        .tabs li {
+            border-top: 1px solid #E2E2E2;
+            border-bottom: 1px solid #E2E2E2;
+            float: right;
+            width: 283px;
+        }
+        .tabs li:first-child {
+            border-right: 1px solid #E2E2E2;
+            border-left: 1px solid #E2E2E2;
+            float: right;
+            width: 313px !important;
+        }
+        .tabs li:last-child {
+            border-left: 1px solid #E2E2E2;
+        }
+        .tabs li:nth-child(3) {
+            border-right: 1px solid #E2E2E2;
+        }
+        .tabs li.space {
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            float: right;
+            width: 4px;
+        }
+        .tabs a {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #888;
+            padding: 20px 0;
+        }
+        .tabs a:hover,
+        .tabs a.active {
+            background: #ddd;
+        }
+        .tabgroup div {
+            padding: 30px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        section{
+            margin: 5px 0;
+
+        }
+
+        .tabs{
+            padding :0;
+            margin:0;
+
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="wrapper">
+    <h1>Quick and Simple Tabs</h1>
+    <p>A quick and easy method for tabs that supports multiple tab groups on one page.</p>
+    <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+
+        <li><a href="#tab1" class="active">Tab 1</a></li>
+        <li class="space"></li>
+        <li><a href="#tab2">Tab 2</a></li>
+        <li><a href="#tab3">Tab 3</a></li>
+        <li><a href="#tab4">Tab 4</a></li>
+    </ul>
+    <section id="first-tab-group" class="tabgroup">
+        <div id="tab1">
+            <h2>Heading 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla deserunt consectetur ratione id tempore laborum laudantium facilis reprehenderit beatae dolores ipsum nesciunt alias iusto dicta eius itaque blanditiis modi velit.</p>
+        </div>
+        <div id="tab2">
+            <h2>Heading 2</h2>
+            <p>Adipisci autem obcaecati velit natus quos beatae explicabo at tempora minima voluptates deserunt eum consectetur reiciendis placeat dolorem repellat in nam asperiores impedit voluptas iure repellendus unde eveniet accusamus ex.</p>
+        </div>
+        <div id="tab3">
+            <h2>Heading 3</h2>
+            <p>Atque ratione soluta laboriosam illo inventore amet ipsum aliquam assumenda harum provident nam accusantium neque debitis obcaecati maxime officia saepe ad ducimus in quam libero vero quasi. Saepe sit nisi?</p>
+        </div>
+        <div id="tab4">
+            <h2>Heading 4</h2>
+            <p>Quidem perferendis id sapiente cumque ullam repellendus dolorum odit rerum quibusdam tempora voluptatibus ipsum. Maiores laborum velit aperiam dicta quisquam assumenda at esse exercitationem culpa sequi porro minus ipsa aut.</p>
+        </div>
+    </section>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script>
+$('.tabgroup > div').hide();
+$('.tabgroup > div:first-of-type').show();
+$('.tabs a').click(function(e){
+e.preventDefault();
+var $this = $(this),
+tabgroup = '#'+$this.parents('.tabs').data('tabgroup'),
+others = $this.closest('li').siblings().children('a'),
+target = $this.attr('href');
+others.removeClass('active');
+$this.addClass('active');
+$(tabgroup).children('div').hide();
+$(target).show();
+
+})
+</script>
+
+</body>
+</html>
